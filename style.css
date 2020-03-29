@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background: #050210;
+	padding-top: 200px;
+}
+
+.box {
+	position: relative;
+	width: 250px;
+	height: 250px;
+	border-radius: 200px;
+	margin: 0 auto;
+    background: linear-gradient(90deg, rgba(251,93,173,1) 0%, rgba(85,251,159,1) 35%, rgba(185,122,255,1) 100%);
+	animation: my-animation linear infinite;
+	animation-duration: 1s;
+	transform-origin: 50% 50% 0;
+
+}
+
+@keyframes my-animation {
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.box:before {
+	content: '';
+	position: absolute;
+	background: linear-gradient(90deg, rgba(251,93,173,1) 0%, rgba(85,251,159,1) 35%, rgba(185,122,255,1) 100%); 
+	width: 250px;
+	height: 250px;
+	border-radius: 250px;
+	transform-origin: 50% 50% 0;
+  	filter: blur(50px);
+
+}
+
+.box-2 {
+	width: 200px;
+	height: 200px;
+	background: #000;
+	margin: 0 auto;
+	border-radius: 100px;
+	position: relative;
+	bottom: 225px;
+	animation: my-animation-2 linear infinite;
+	animation-duration: 1s;
+	z-index: 1;
+}
+
+@keyframes my-animation-2 {
+	0%{
+		background-color: #0B0326;
+		transform: scale(0)}
+	
+	100%{
+		background-color: #0B0326;
+		transform: scale(1)}
+	
+	
+}
+
+.box-3 {
+	width: 200px;
+	height: 200px;
+	background: #000;
+	margin: 0 auto;
+	border-radius: 100px;
+	position: relative;
+	bottom: 425px;
+	z-index: 0;
+	
+}
